@@ -58,10 +58,10 @@
   border: 1px solid var(--rosa);
   transition: all 0.5s ease-in-out;
 }
-#btn-agendar:hover {
+/* #btn-agendar:hover {
   background-color: var(--azul);
   border: 1px solid var(--azul);
-}
+} */
 
 #btn-ver-mapa {
   padding: 5px;
@@ -70,7 +70,7 @@
   margin-bottom: 10px;
   transition: all 0.5s ease-in-out;
 }
-#btn-ver-mapa:hover {
+/* #btn-ver-mapa:hover {
   background-color: var(--rosa);
   border: 1px solid var(--rosa);
-}
+} */
