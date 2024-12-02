@@ -111,7 +111,8 @@ const Home = () => {
         </Modal.Header>
         <Modal.Body className="bg-dark">
           <p>
-            Mis papis y yo te invitamos a descubrir cuál será mi género 👼🏼👶🏼
+            holaaaaaaaaaaaaaaaa Mis papis y yo te invitamos a descubrir cuál
+            será mi género 👼🏼👶🏼
           </p>
         </Modal.Body>
         <Modal.Footer className="bg-dark">
