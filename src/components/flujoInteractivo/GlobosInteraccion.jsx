@@ -27,17 +27,12 @@ const GlobosInteraccion = ({ userName, onComplete }) => {
       selection: gender === "boy" ? "niño" : "niña",
     };
 
-    // Verificar si el usuario ya está registrado
-    const isUserRegistered = storedData.some(
-      (entry) => entry.name.toLowerCase() === userName.toLowerCase()
-    );
-
-    if (!isUserRegistered) {
-      const updatedData = [...storedData, newEntry];
-      localStorage.setItem("eventData", JSON.stringify(updatedData));
-      console.log("Datos guardados en localStorage:", updatedData); // Verificar datos
-    } else {
-      console.log("Usuario ya registrado en localStorage.");
+    // Solo guardar si se hace clic en un globo
+    if (!storedData.some((entry) => entry.name === userName)) {
+      localStorage.setItem(
+        "eventData",
+        JSON.stringify([...storedData, newEntry])
+      );
     }
 
     // Ocultar después de 5 segundos
