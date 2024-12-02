@@ -1,0 +1,55 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionVestimenta {
+  margin-bottom: 50px;
+}
+
+#title-vestimenta {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 40px;
+}
+
+#card-vestimenta {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--azul);
+}
+
+#vestimentaIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+#codigo-vestimenta img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.team-azul {
+  color: var(--azul);
+}
+.or {
+  color: var(--oro);
+}
+.team-rosa {
+  color: var(--rosa);
+}
+
+.descripcion-vestimenta {
+  letter-spacing: 2px;
+}

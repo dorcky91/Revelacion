@@ -1,0 +1,18 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+.start-button {
+  font-family: "Protest Revolution", sans-serif;
+  background-color: var(--azul);
+  color: #eee;
+  border: 1px solid var(--azul);
+  margin-top: 50px;
+}
+.start-button:hover {
+  background-color: var(--rosa);
+  border: 1px solid var(--rosa);
+}

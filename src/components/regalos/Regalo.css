@@ -1,0 +1,86 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionRegalo {
+  margin-bottom: 50px;
+}
+
+#title-regalo {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 40px;
+}
+
+#card-regalo {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--rosa);
+}
+
+#regaloIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+.btn-amazon {
+  font-family: "Lora", serif;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #666f88;
+  background-color: #85aec870;
+  border-color: var(--azul);
+}
+.btn-amazon:hover {
+  background-color: var(--azul);
+  border-color: var(--azul);
+}
+.btn-amazon:active {
+  background-color: var(--azul) !important;
+  border-color: var(--azul) !important;
+}
+.btn-liverpool {
+  font-family: "Lora", serif;
+  font-family: "Protest Revolution", sans-serif;
+  letter-spacing: 2px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #666f88;
+  background-color: #e3b1c470;
+  border-color: var(--rosa);
+}
+.btn-liverpool:hover {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+}
+.btn-liverpool:active {
+  background-color: var(--rosa) !important;
+  border-color: var(--rosa) !important;
+}
+.btn-efectivo {
+  font-family: "Lora", serif;
+  font-size: 10px;
+  color: #666f88;
+  background-color: #d4b75150;
+  border-color: var(--oro);
+}
+.btn-efectivo:hover {
+  background-color: #d4b75195;
+  border-color: var(--oro);
+}
+.btn-efectivo:active {
+  background-color: #d4b75195 !important;
+  border-color: var(--oro) !important;
+}

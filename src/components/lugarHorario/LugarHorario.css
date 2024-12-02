@@ -1,0 +1,76 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionLugarHorario {
+  margin-bottom: 50px;
+}
+
+#title-lugar-horario {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 40px;
+}
+
+#card-lugar-horario {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--oro);
+}
+
+#mapIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+#card-title {
+  letter-spacing: 2px;
+  font-size: 19px;
+  color: var(--oro);
+  font-weight: bold;
+}
+
+#direction img {
+  width: 60px;
+  height: 60px;
+}
+
+#fecha-evento {
+  font-size: 18px;
+  color: var(--oro);
+  font-weight: bold;
+}
+
+#btn-agendar {
+  padding: 5px;
+  background-color: var(--rosa);
+  border: 1px solid var(--rosa);
+  transition: all 0.5s ease-in-out;
+}
+#btn-agendar:hover {
+  background-color: var(--azul);
+  border: 1px solid var(--azul);
+}
+
+#btn-ver-mapa {
+  padding: 5px;
+  background-color: var(--azul);
+  border: 1px solid var(--azul);
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+#btn-ver-mapa:hover {
+  background-color: var(--rosa);
+  border: 1px solid var(--rosa);
+}

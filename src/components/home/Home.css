@@ -1,0 +1,145 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+
+#home::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: center center;
+  background: rgba(0, 0, 0, 0.85);
+  /* background: linear-gradient(
+    -90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 0.9) 60%,
+    rgba(0, 212, 255, 0.1) 100%
+  ); */
+}
+
+#bg-image-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+}
+
+.nombre-mama {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  /* color: var(--rosa);
+  font-weight: bold; */
+  background: linear-gradient(
+    360deg,
+    var(--rosa) 20%,
+    var(--oro) 60%,
+    var(--azul) 50%
+  );
+  -webkit-background-clip: text; /* Hace que el gradiente "recorte" solo el texto */
+  -webkit-text-fill-color: transparent; /* Hace el fondo del texto transparente */
+  font-size: 1.5rem; /* Ejemplo de tamaño de fuente */
+  font-weight: bold; /* Ejemplo de peso */
+}
+.nombre-papa {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  /* color: var(--azul);
+  font-weight: bold; */
+  background: linear-gradient(
+    180deg,
+    var(--rosa) 50%,
+    var(--oro) 60%,
+    var(--azul) 50%
+  );
+  -webkit-background-clip: text; /* Hace que el gradiente "recorte" solo el texto */
+  -webkit-text-fill-color: transparent; /* Hace el fondo del texto transparente */
+  font-size: 1.5rem; /* Ejemplo de tamaño de fuente */
+  font-weight: bold; /* Ejemplo de peso */
+}
+
+.separar-nombre {
+  background: linear-gradient(
+    -180deg,
+    var(--rosa) 50%,
+    var(--oro) 60%,
+    var(--azul) 50%
+  );
+  -webkit-background-clip: text; /* Hace que el gradiente "recorte" solo el texto */
+  -webkit-text-fill-color: transparent; /* Hace el fondo del texto transparente */
+  font-size: 2rem; /* Ejemplo de tamaño de fuente */
+  font-weight: bold; /* Ejemplo de peso */
+}
+
+.descripcion {
+  padding: 20px 50px 20px 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 18px;
+  color: #666f88;
+  color: #eee;
+}
+
+.img-genero {
+  width: 110px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.modalHome {
+  padding: 30px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  color: #666f88;
+}
+
+.btn-close::before {
+  content: "✖️";
+}
+.btn-close {
+  background: none;
+}
+
+.modal-body {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-footer button {
+  background-color: var(--azul);
+  border: none;
+}
+.modal-footer button:hover {
+  background-color: var(--rosa);
+}

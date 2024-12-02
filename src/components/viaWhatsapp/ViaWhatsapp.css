@@ -1,0 +1,76 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionWhatsapp {
+  margin-bottom: 50px;
+}
+
+#title-whatsapp {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 40px;
+}
+
+#card-whatsapp {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--azul);
+}
+
+#viaWhatsappIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+.btn-whatsappMama {
+  letter-spacing: 2px;
+  background: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  color: var(--rosa);
+  border-color: var(--rosa);
+}
+
+.btn-whatsappMama:hover {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  font-weight: normal;
+}
+.btn-whatsappMama:active {
+  background-color: var(--azul) !important;
+  border-color: var(--azul) !important;
+}
+.btn-whatsappPapa {
+  letter-spacing: 2px;
+  background: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  color: var(--azul);
+  border-color: var(--azul);
+}
+
+.btn-whatsappPapa:hover {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+  font-weight: normal;
+}
+.btn-whatsappPapa:active {
+  background-color: var(--rosa) !important;
+  border-color: var(--rosa) !important;
+}

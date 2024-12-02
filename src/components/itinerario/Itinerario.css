@@ -1,0 +1,41 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionItinerario {
+  margin-bottom: 50px;
+}
+
+#title-itinerario {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 40px;
+}
+
+#card-itinerario {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--rosa);
+}
+
+#itinerarioIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+#actividades img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}

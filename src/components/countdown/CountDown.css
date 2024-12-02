@@ -1,0 +1,56 @@
+/* // Estilos en JS */
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Lora, sans-serif;
+}
+.digitStyle {
+  font-family: "Protest Revolution", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  height: 60px;
+  width: 60px;
+  color: #666f88;
+  background: linear-gradient(
+    90deg,
+    var(--rosa) 100%,
+    /* var(--oro) 60%, */ var(--azul) 100%
+  );
+
+  background: linear-gradient(
+    -90deg,
+    var(--azul) 0%,
+    var(--rosa) 60%,
+    var(--oro) 100%
+  );
+  border-radius: 50%;
+}
+.labelStyle {
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #666f88;
+  color: #eee;
+}
+
+.separador {
+  margin-top: -20px;
+  font-weight: bold;
+}

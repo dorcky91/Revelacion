@@ -1,0 +1,60 @@
+:root {
+  /* Colores principales */
+  --rosa: #e3b1c4;
+  --azul: #85aec8;
+  --oro: #d4b751;
+}
+
+#sectionAgradecimiento {
+  margin-bottom: 50px;
+}
+
+#title-agradecimiento {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 40px;
+}
+
+#card-agradecimiento {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px var(--azul);
+}
+
+#agradecimientoIcon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin-top: -75px;
+}
+
+.carousel-agradecimiento {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-caption {
+  position: absolute;
+  text-align: center !important;
+  font-size: 20px;
+  color: #666f88;
+  font-weight: bold;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  position: absolute;
+  background: none;
+  margin-top: -150px !important;
+}
+.carousel-control-next-icon::before {
+  content: "🔜";
+}
+.carousel-control-prev-icon::before {
+  content: "🔙";
+}
