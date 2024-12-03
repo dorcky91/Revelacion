@@ -43,7 +43,7 @@ const Agradecimiento = () => {
 
               <Carousel.Item>
                 <img
-                  className="d-block w-100 object-fit-cover"
+                  className="d-block w-100 object-fit-cover ajustar-img"
                   height={450}
                   src={sesion2} // Agrega una nueva imagen
                   alt="Foto de pareja"

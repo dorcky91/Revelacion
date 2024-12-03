@@ -1,33 +1,3 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
-// import { Button } from "react-bootstrap";
-// import { motion } from "framer-motion";
-// import "./StartButton.css";
-
-// const StartButton = () => {
-//   const navigate = useNavigate();
-
-//   const handleStartPress = () => {
-//     navigate("/reveal"); // Navega a la ruta /reveal
-//   };
-
-//   return (
-//     <motion.div
-//       animate={{ y: [0, -10, 0] }} // Animación "bounce"
-//       transition={{
-//         repeat: Infinity,
-//         repeatType: "loop",
-//         duration: 1,
-//       }}>
-//       <Button size="lg" className="start-button" onClick={handleStartPress}>
-//         Ir al evento
-//       </Button>
-//     </motion.div>
-//   );
-// };
-
-// export default StartButton;
-
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { motion } from "framer-motion";

@@ -36,6 +36,11 @@
 .carousel-img {
   filter: brightness(0.4);
 }
+
+.ajustar-img {
+  filter: brightness(0.35);
+}
+
 .carousel-caption {
   position: absolute;
   text-align: center !important;

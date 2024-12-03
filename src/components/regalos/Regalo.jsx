@@ -28,20 +28,6 @@ const Regalo = () => {
               obsequiarnos algo, será de corazón.
             </p>
 
-            {/* Botón de Amazon - Redirigir a la mesa de regalos */}
-            <Button
-              variant="primary"
-              className="btn-amazon w-100 d-flex align-items-center gap-1 mb-4 p-3"
-              onClick={() =>
-                window.open(
-                  "https://www.amazon.com.mx/baby-reg/your-registry/39CQ0O2MP7X3J?ref_=br_mw_ql_yr",
-                  "_blank"
-                )
-              }>
-              <img height={50} src={amazon} alt="Logo Amazon" />
-              Amazon
-            </Button>
-
             {/* Botón de Liverpool - Redirigir a la mesa de regalos */}
             <Button
               variant="primary"
@@ -54,6 +40,20 @@ const Regalo = () => {
               }>
               <img height={50} src={liverpool} alt="Logo Liverpool" />
               Liverpool
+            </Button>
+
+            {/* Botón de Amazon - Redirigir a la mesa de regalos */}
+            <Button
+              variant="primary"
+              className="btn-amazon w-100 d-flex align-items-center gap-1 mb-4 p-3"
+              onClick={() =>
+                window.open(
+                  "https://www.amazon.com.mx/baby-reg/anettegabrielaflores-lpez-abril-2025-tehuacan/3GY272YDZZJ89?ref_=cm_sw_r_apin_dp_5914RH1659VWQTQGS354&language=en_US",
+                  "_blank"
+                )
+              }>
+              <img height={50} src={amazon} alt="Logo Amazon" />
+              Amazon
             </Button>
 
             {/* Botón de Efectivo - Mostrar modal con datos bancarios */}
