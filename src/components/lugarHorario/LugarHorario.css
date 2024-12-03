@@ -53,7 +53,8 @@
 }
 
 #btn-agendar {
-  padding: 5px;
+  padding: 7px;
+  font-size: 15px;
   background-color: var(--rosa);
   border: 1px solid var(--rosa);
   transition: all 0.5s ease-in-out;
@@ -64,7 +65,8 @@
 } */
 
 #btn-ver-mapa {
-  padding: 5px;
+  font-size: 15px;
+  padding: 7px;
   background-color: var(--azul);
   border: 1px solid var(--azul);
   margin-bottom: 10px;

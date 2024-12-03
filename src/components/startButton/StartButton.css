@@ -10,7 +10,7 @@
   background-color: var(--azul);
   color: #eee;
   border: 1px solid var(--azul);
-  margin-top: 50px;
+  margin-top: 35px;
 }
 .start-button:hover {
   background-color: var(--rosa);

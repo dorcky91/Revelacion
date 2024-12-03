@@ -33,16 +33,17 @@
   height: 60px;
   margin-top: -75px;
 }
-
-.carousel-agradecimiento {
-  background-color: rgba(0, 0, 0, 0.8);
+.carousel-img {
+  filter: brightness(0.4);
 }
-
 .carousel-caption {
   position: absolute;
   text-align: center !important;
   font-size: 20px;
-  color: #666f88;
+  /* color: #666f88; */
+  /* font-weight: bold; */
+}
+.carousel-caption h5 {
   font-weight: bold;
 }
 

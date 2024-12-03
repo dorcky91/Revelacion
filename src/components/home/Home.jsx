@@ -9,12 +9,12 @@ import Confetti from "react-confetti";
 import "./Home.css";
 
 // Importa imágenes
-import photo1 from "../../assets/images/photo1.jpg";
-import photo2 from "../../assets/images/photo2.jpg";
-import photo3 from "../../assets/images/photo3.jpg";
-import photo4 from "../../assets/images/photo4.jpg";
-import photo5 from "../../assets/images/photo5.jpg";
-import photo6 from "../../assets/images/photo6.jpg";
+import photo1 from "../../assets/images/sesion3.jpg";
+import photo2 from "../../assets/images/sesion5.jpg";
+import photo3 from "../../assets/images/sesion7.jpg";
+import photo4 from "../../assets/images/sesion8.jpg";
+import photo5 from "../../assets/images/sesion10.jpg";
+import photo6 from "../../assets/images/sesion11.jpg";
 import playIcon from "../../assets/images/play.png";
 import pauseIcon from "../../assets/images/pausar.png";
 
@@ -111,8 +111,7 @@ const Home = () => {
         </Modal.Header>
         <Modal.Body className="bg-dark">
           <p>
-            holaaaaaaaaaaaaaaaa Mis papis y yo te invitamos a descubrir cuál
-            será mi género 👼🏼👶🏼
+            Mis papis y yo te invitamos a descubrir cuál será mi género 👼🏼👶🏼
           </p>
         </Modal.Body>
         <Modal.Footer className="bg-dark">
@@ -146,7 +145,7 @@ const Home = () => {
 
               <motion.div
                 initial={{ scale: 1 }}
-                animate={{ scale: 1.5 }}
+                animate={{ scale: 1.6 }}
                 transition={{
                   duration: 1,
                   repeat: Infinity,

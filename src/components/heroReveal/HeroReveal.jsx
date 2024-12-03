@@ -22,9 +22,14 @@ const HeroReveal = () => {
                 alt="Imagen de Agradecimiento"
               />
               <Carousel.Caption className="carousel-hero">
-                <h5>¡Ya Casi Estoy Aquí!</h5>
+                <h5>
+                  ¡Gracias a Dios!
+                  {/* ¡Ya Casi Estoy Aquí! */}
+                </h5>
                 <p className="small">
-                  Con mucho amor, estoy contando los días para conocerlos
+                  {/* Con mucho amor, estoy contando los días para conocerlos */}
+                  Te agradecemos, Señor, por protegernos, por darnos salud y por
+                  permitirnos vivir este hermoso momento.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -37,10 +42,17 @@ const HeroReveal = () => {
                 alt="Una niña bonita"
               />
               <Carousel.Caption className="carousel-hero">
-                <h5>¡Una Pequeña Gran Noticia!</h5>
+                <h5>¡Dios lo hizo posible!</h5>
+                {/* <h5>¡Una Pequeña Gran Noticia!</h5> */}
                 <p className="small">
-                  Muy pronto iluminaré su mundo con mi llegada🎉👣
+                  Gracias por cuidar de nosotros y guiarnos en este hermoso
+                  camino.
+                  {/* Con tu bendición, nuestro sueño se está haciendo
+                  realidad. */}
                 </p>
+                {/* <p className="small">
+                  Muy pronto iluminaré su mundo con mi llegada🎉👣
+                </p> */}
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -68,7 +80,7 @@ const HeroReveal = () => {
               <Carousel.Caption className="carousel-hero">
                 <h5>¡Ya Vengo!</h5>
                 <p className="small">
-                  Estoy en camino, ansioso por conocerlos y recibir su cariño
+                  Estoy en camino, ansios@ por conocerlos y recibir su cariño
                   🎀🎈
                 </p>
               </Carousel.Caption>

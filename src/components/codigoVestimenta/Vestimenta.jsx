@@ -9,7 +9,7 @@ const Vestimenta = () => {
   return (
     <section id="sectionVestimenta">
       <h1 id="title-vestimenta">Código de vestimenta</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-vestimenta">
             <img id="vestimentaIcon" src={vestimentaIcon} />

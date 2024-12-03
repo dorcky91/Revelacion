@@ -11,7 +11,7 @@ const Itinerario = () => {
   return (
     <section id="sectionItinerario">
       <h1 id="title-itinerario">Itineraio</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-itinerario">
             <img id="itinerarioIcon" src={itinerarioIcon} />

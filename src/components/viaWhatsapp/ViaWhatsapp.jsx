@@ -15,7 +15,7 @@ const ViaWhatsapp = () => {
   return (
     <section id="sectionWhatsapp">
       <h1 id="title-whatsapp">Vía whatsapp</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-whatsapp">
             <img id="viaWhatsappIcon" src={viaWhatsappIcon} />
@@ -56,7 +56,7 @@ const ViaWhatsapp = () => {
               Confirmar con mamá
             </Button>
 
-            <p className="fw-bold small text-start mt-4 ">
+            <p className="fw-bold fs-6 text-start mt-4 ">
               NOTA: Fecha límite de confirmación, 25 de diciembre 2024
             </p>
           </Col>

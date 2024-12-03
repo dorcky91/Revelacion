@@ -67,7 +67,7 @@ const ConfirmarAsistencia = () => {
   return (
     <section id="sectionAsistencia">
       <h1 id="title-asistencia">Confirmar asistencia</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-asistencia">
             <img id="asistenciaIcon" src={asistenciaIcon} />
@@ -149,7 +149,7 @@ const ConfirmarAsistencia = () => {
                     Enviar
                   </Button>
 
-                  <p className="fw-bold small text-start mt-4 ">
+                  <p className="fw-bold fs-6 text-start mt-4 ">
                     NOTA: Fecha límite de confirmación, 25 de diciembre 2024
                   </p>
                 </Form>

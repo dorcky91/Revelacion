@@ -1,7 +1,11 @@
 import React from "react";
 import { Col, Row, Container, Carousel } from "react-bootstrap";
 import gracias from "../../assets/images/gracias.png";
-import agradecimiento from "../../assets/images/agradecimiento.png";
+import sesion1 from "../../assets/images/sesion1.jpg";
+import sesion2 from "../../assets/images/sesion2.jpg";
+import sesion4 from "../../assets/images/sesion4.jpg";
+import sesion6 from "../../assets/images/sesion6.jpg";
+import sesion9 from "../../assets/images/sesion9.jpg";
 import girl from "../../assets/images/girl.png"; // Otra imagen de ejemplo
 import boy from "../../assets/images/boy.png"; // Otra imagen de ejemplo
 import "./Agradecimiento.css";
@@ -10,24 +14,24 @@ const Agradecimiento = () => {
   return (
     <section id="sectionAgradecimiento">
       <h1 id="title-agradecimiento">Agradecimiento</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-agradecimiento">
             <img id="agradecimientoIcon" src={gracias} alt="Gracias" />
             <p className="descripcion-agradecimiento text-start mb-4">
-              Gracias de antemano por ser parte de este momento tan especial
-              para nosotros. Nos llena de emoción compartir con ustedes la
-              revelación del sexo de nuestro bebé. Su compañía hace este día aún
-              más significativo.
+              Hoy, con el corazón lleno de gratitud, celebramos la bendición de
+              saber que un ser maravilloso está por llegar. Gracias a Dios por
+              darnos la oportunidad de ser padres, por la protección que nos
+              ofrece cada día y por el amor infinito que sentimos por este bebé.
             </p>
 
             {/* Carousel de imágenes */}
             <Carousel>
               <Carousel.Item>
                 <img
-                  className="d-block w-100 object-fit-cover"
+                  className="d-block carousel-img w-100 object-fit-cover"
                   height={450}
-                  src={agradecimiento}
+                  src={sesion1}
                   alt="Imagen de Agradecimiento"
                 />
                 <Carousel.Caption className="carousel-caption">
@@ -43,8 +47,8 @@ const Agradecimiento = () => {
                 <img
                   className="d-block w-100 object-fit-cover"
                   height={450}
-                  src={girl} // Agrega una nueva imagen
-                  alt="Una niña bonita"
+                  src={sesion2} // Agrega una nueva imagen
+                  alt="Foto de pareja"
                 />
                 <Carousel.Caption className="carousel-caption">
                   <h5>La Aventura Comienza</h5>
@@ -54,18 +58,54 @@ const Agradecimiento = () => {
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
+
               <Carousel.Item>
                 <img
-                  className="d-block w-100 object-fit-cover"
+                  className="d-block carousel-img w-100 object-fit-cover"
                   height={450}
-                  src={boy} // Agrega una nueva imagen
-                  alt="Un niño bonito"
+                  src={sesion4} // Agrega una nueva imagen
+                  alt="Foto de pareja"
                 />
                 <Carousel.Caption className="carousel-caption">
-                  <h5>Un Regalo de Amor</h5>
+                  <h5>Gracias, Señor, por la vida</h5>
                   <p className="small">
-                    El milagro de la vida llegó para recordarnos que los sueños
-                    sí se cumplen.
+                    Con cada día que pasa, agradecemos a Dios por este bebé que
+                    pronto llegará a nuestra vida. Gracias por guiarnos y
+                    protegernos.
+                  </p>
+                </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block carousel-img w-100 object-fit-cover"
+                  height={450}
+                  src={sesion6} // Agrega una nueva imagen
+                  alt="Foto de pareja"
+                />
+                <Carousel.Caption className="carousel-caption">
+                  <h5>Gracias, Señor, por la vida</h5>
+                  <p className="small">
+                    Con cada día que pasa, agradecemos a Dios por este bebé que
+                    pronto llegará a nuestra vida. Gracias por guiarnos y
+                    protegernos.
+                  </p>
+                </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block carousel-img w-100 object-fit-cover"
+                  height={450}
+                  src={sesion9} // Agrega una nueva imagen
+                  alt="Foto de pareja"
+                />
+                <Carousel.Caption className="carousel-caption">
+                  <h5>Gracias, Señor, por la vida</h5>
+                  <p className="small">
+                    Con cada día que pasa, agradecemos a Dios por este bebé que
+                    pronto llegará a nuestra vida. Gracias por guiarnos y
+                    protegernos.
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>

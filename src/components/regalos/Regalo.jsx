@@ -19,7 +19,7 @@ const Regalo = () => {
   return (
     <section id="sectionRegalo">
       <h1 id="title-regalo">Regalos</h1>
-      <Container fluid py-5>
+      <Container fluid>
         <Row>
           <Col id="card-regalo">
             <img id="regaloIcon" src={regaloIcon} alt="Regalo" />
