@@ -73,8 +73,9 @@ const Regalo = () => {
               <Modal.Body>
                 <h5>BBVA</h5>
                 <p>Anette Gabriela Flores López</p>
-                <p>Número de Cliente: 1234567890</p>
-                <p>Clave Interbancaria: 01234567890123456789012345</p>
+                <p>Número de cuenta: 151 135 5859</p>
+                <p>Clave Interbancaria: 012 180 01511355859 1</p>
+                <p>Número de tarjeta: 4152 3143 1763 4338</p>
                 {/* Agrega más datos si es necesario */}
               </Modal.Body>
               <Modal.Footer>
