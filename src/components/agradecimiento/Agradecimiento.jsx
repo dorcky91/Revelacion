@@ -6,8 +6,6 @@ import sesion2 from "../../assets/images/sesion2.jpg";
 import sesion4 from "../../assets/images/sesion4.jpg";
 import sesion6 from "../../assets/images/sesion6.jpg";
 import sesion9 from "../../assets/images/sesion9.jpg";
-import girl from "../../assets/images/girl.png"; // Otra imagen de ejemplo
-import boy from "../../assets/images/boy.png"; // Otra imagen de ejemplo
 import "./Agradecimiento.css";
 
 const Agradecimiento = () => {
@@ -67,7 +65,7 @@ const Agradecimiento = () => {
                   alt="Foto de pareja"
                 />
                 <Carousel.Caption className="carousel-caption">
-                  <h5>Gracias, Señor, por la vida</h5>
+                  <h5>Gracias, Señor, Por La Vida</h5>
                   <p className="small">
                     Con cada día que pasa, agradecemos a Dios por este bebé que
                     pronto llegará a nuestra vida. Gracias por guiarnos y
@@ -84,11 +82,10 @@ const Agradecimiento = () => {
                   alt="Foto de pareja"
                 />
                 <Carousel.Caption className="carousel-caption">
-                  <h5>Gracias, Señor, por la vida</h5>
+                  <h5>Nuestra Aventura Comienza</h5>
                   <p className="small">
-                    Con cada día que pasa, agradecemos a Dios por este bebé que
-                    pronto llegará a nuestra vida. Gracias por guiarnos y
-                    protegernos.
+                    Viaje lleno de amor, sueños y emociones nos ha transformado.
+                    Agradecemos a todos por acompañarnos y darnos fuerza.
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -101,11 +98,10 @@ const Agradecimiento = () => {
                   alt="Foto de pareja"
                 />
                 <Carousel.Caption className="carousel-caption">
-                  <h5>Gracias, Señor, por la vida</h5>
+                  <h5>Pronto Seremos Tres</h5>
                   <p className="small">
-                    Con cada día que pasa, agradecemos a Dios por este bebé que
-                    pronto llegará a nuestra vida. Gracias por guiarnos y
-                    protegernos.
+                    Nuestra familia está por crecer, pero el amor que sentimos
+                    el uno por el otro nunca dejará de expandirse.
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
