@@ -16,6 +16,7 @@ import pauseIcon from "../assets/images/pausar.png";
 const Reveal = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.3); // Establece el volumen predeterminado (30%)
 
   // Reproducción automática al cargar
   useEffect(() => {
@@ -32,7 +33,12 @@ const Reveal = () => {
     };
 
     playAudio();
-  }, []); // Se ejecuta solo una vez cuando el componente se monta
+
+    // Establecer el volumen
+    if (audioRef.current) {
+      audioRef.current.volume = volume; // Control de volumen
+    }
+  }, [volume]); // Dependencia en 'volume' para ajustar el volumen cuando cambia
 
   // Controlar reproducción o pausa
   const togglePlayPause = () => {
@@ -44,23 +50,25 @@ const Reveal = () => {
     setIsPlaying(!isPlaying); // Cambia el estado de reproducción
   };
 
+  // Manejar el cambio de volumen
+  const handleVolumeChange = (e) => {
+    setVolume(e.target.value);
+    if (audioRef.current) {
+      audioRef.current.volume = e.target.value; // Ajusta el volumen
+    }
+  };
+
   return (
     <div>
       <HeroReveal />
-
       <LugarHorario />
-
       <Itinerario />
-
       <Vestimenta />
-
       <ConfirmarAsistencia />
-
       <ViaWhatsapp />
-
       <Regalo />
-
       <Agradecimiento />
+
       <section>
         <Container>
           <Row>
@@ -74,6 +82,7 @@ const Reveal = () => {
           </Row>
         </Container>
       </section>
+
       {/* Botón para Play/Pausa */}
       <section className="text-center py-3">
         <div className="music-control">
@@ -87,6 +96,23 @@ const Reveal = () => {
           </button>
         </div>
       </section>
+
+      {/* Control de volumen */}
+      <section className="text-center py-3">
+        <div>
+          <label>Volumen</label>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+            className="volume-slider"
+          />
+        </div>
+      </section>
+
       {/* Reproducción de audio */}
       <audio ref={audioRef} src="/audio/cancion.mp3" loop />
     </div>
