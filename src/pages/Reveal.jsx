@@ -84,7 +84,7 @@ const Reveal = () => {
       </section>
 
       {/* Botón para Play/Pausa */}
-      <section className="text-center py-3">
+      <section className="text-center">
         <div className="music-control">
           <button onClick={togglePlayPause}>
             <img
@@ -94,22 +94,6 @@ const Reveal = () => {
               alt={isPlaying ? "Pausar" : "Reproducir"}
             />
           </button>
-        </div>
-      </section>
-
-      {/* Control de volumen */}
-      <section className="text-center py-3">
-        <div>
-          <label>Volumen</label>
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="volume-slider"
-          />
         </div>
       </section>
 
