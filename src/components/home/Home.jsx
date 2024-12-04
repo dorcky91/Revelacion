@@ -57,12 +57,42 @@ const Home = () => {
 
   // Cambiar imágenes de fondo
   useEffect(() => {
+    let timeout;
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      // Añadir la clase `hidden` para empezar la transición
+      const bgElement = document.getElementById("bg-image-home");
+      if (bgElement) {
+        bgElement.classList.add("hidden");
+      }
+
+      // Esperar 500ms antes de cambiar la imagen (coincide con la duración de la transición)
+      timeout = setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+
+        // Remover la clase `hidden` para mostrar la nueva imagen
+        if (bgElement) {
+          bgElement.classList.remove("hidden");
+        }
+      }, 500); // 500ms coincide con el tiempo de transición CSS
     }, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
   }, [images.length]);
+
+  // Pre-cargar imágenes
+  useEffect(() => {
+    const preloadImages = (imageArray) => {
+      imageArray.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    preloadImages(images);
+  }, [images]);
 
   // Reproducir música
   const playMusic = () => {
@@ -70,15 +100,8 @@ const Home = () => {
     audio.loop = true;
     audio
       .play()
-      //   .then(() => setIsMusicPlaying(true))
       .catch((err) => console.error("Error al reproducir música:", err));
   };
-
-  //   // Mostrar confetti por unos segundos
-  //   useEffect(() => {
-  //     const confettiTimer = setTimeout(() => setShowConfetti(false), 5000);
-  //     return () => clearTimeout(confettiTimer);
-  //   }, []); // Solo al montar
 
   // Cerrar el modal y reproducir la música
   const handleModalClose = () => {
@@ -129,9 +152,9 @@ const Home = () => {
         <Row className="mb-5">
           <Col>
             <div id="entrada">
-              <h1 className="nombre-mama">Anette</h1>
-              <h1 className="separar-nombre">&</h1>
               <h1 className="nombre-papa">Orlando</h1>
+              <h1 className="separar-nombre">&</h1>
+              <h1 className="nombre-mama">Anette</h1>
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}

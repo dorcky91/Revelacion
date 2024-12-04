@@ -46,7 +46,12 @@
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  transition: background-image 1s ease-in-out;
+  transition: background-image 0.5s ease-in-out, opacity 0.9s ease-in-out;
+  opacity: 1; /* Se controla la opacidad */
+}
+
+#bg-image-home.hidden {
+  opacity: 0; /* Oculta la imagen al cambiar */
 }
 
 .nombre-mama {
