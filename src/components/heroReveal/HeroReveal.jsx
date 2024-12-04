@@ -22,11 +22,11 @@ const HeroReveal = () => {
                 alt="Imagen de Agradecimiento"
               />
               <Carousel.Caption className="carousel-hero">
-                <h5>
+                <h5 className="pt-3">
                   ¡Gracias a Dios!
                   {/* ¡Ya Casi Estoy Aquí! */}
                 </h5>
-                <p className="small">
+                <p className="fs-6">
                   {/* Con mucho amor, estoy contando los días para conocerlos */}
                   Te agradecemos, Señor, por protegernos, por darnos salud y por
                   permitirnos vivir este hermoso momento.
@@ -44,13 +44,13 @@ const HeroReveal = () => {
               <Carousel.Caption className="carousel-hero">
                 <h5>¡Dios lo hizo posible!</h5>
                 {/* <h5>¡Una Pequeña Gran Noticia!</h5> */}
-                <p className="small">
+                <p className="fs-6">
                   Gracias por cuidar de nosotros y guiarnos en este hermoso
                   camino.
                   {/* Con tu bendición, nuestro sueño se está haciendo
                   realidad. */}
                 </p>
-                {/* <p className="small">
+                {/* <p className="fs-6">
                   Muy pronto iluminaré su mundo con mi llegada🎉👣
                 </p> */}
               </Carousel.Caption>
@@ -64,7 +64,7 @@ const HeroReveal = () => {
               />
               <Carousel.Caption className="carousel-hero">
                 <h5>¡La Espera Termina Pronto!</h5>
-                <p className="small">
+                <p className="fs-6">
                   Estoy preparándome para ser el nuevo motivo de alegría en su
                   vida💗💙
                 </p>
@@ -79,7 +79,7 @@ const HeroReveal = () => {
               />
               <Carousel.Caption className="carousel-hero">
                 <h5>¡Ya Vengo!</h5>
-                <p className="small">
+                <p className="fs-6">
                   Estoy en camino, ansios@ por conocerlos y recibir su cariño
                   🎀🎈
                 </p>
@@ -94,7 +94,7 @@ const HeroReveal = () => {
               />
               <Carousel.Caption className="carousel-hero">
                 <h5>¡Hola, Mundo!</h5>
-                <p className="small">
+                <p className="fs-6">
                   Pronto estaré aquí para llenar sus días de amor y sonrisas
                   🎀💙
                 </p>

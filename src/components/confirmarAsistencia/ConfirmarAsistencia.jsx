@@ -32,36 +32,63 @@ const ConfirmarAsistencia = () => {
 
   const getRemainingCharactersColor = (remaining) => {
     if (remaining > 100) return "green"; // Más de 100 caracteres restantes
-    if (remaining > 50) return "yellow"; // Entre 100 y 50 caracteres
+    if (remaining > 50) return "chocolate"; // Entre 100 y 50 caracteres
     return "red"; // 50 o menos caracteres restantes
   };
 
-  // Manejar el envío del formulario
+  // // Manejar el envío del formulario
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Construir el cuerpo del correo electrónico
+  //   const attendanceText =
+  //     formData.attendance === "asistire" ? "Asistiré" : "No asistiré";
+  //   const emailBody = `Nombre: ${formData.name}\nAsistencia: ${attendanceText}\nMensaje: ${formData.comment}`;
+
+  //   // Abrir el cliente de correo con los datos
+  //   window.open(
+  //     `mailto:gabyflowe@gmail.com?cc=orlandoappolon1@gmail.com&subject=Confirmación de asistencia&body=${encodeURIComponent(
+  //       emailBody
+  //     )}`
+  //   );
+
+  //   // alert("¡Gracias por tu respuesta!");
+
+  //   // Limpiar el formulario
+  //   setFormData({
+  //     name: "",
+  //     attendance: "",
+  //     comment: "",
+  //   });
+
+  //   setHasStartedTyping(false); // Reinicia el estado al enviar
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Construir el cuerpo del correo electrónico
     const attendanceText =
       formData.attendance === "asistire" ? "Asistiré" : "No asistiré";
     const emailBody = `Nombre: ${formData.name}\nAsistencia: ${attendanceText}\nMensaje: ${formData.comment}`;
 
-    // Abrir el cliente de correo con los datos
-    window.open(
-      `mailto:gabyflowe@gmail.com?cc=orlandoappolon1@gmail.com&subject=Confirmación de asistencia&body=${encodeURIComponent(
-        emailBody
-      )}`
-    );
+    const mailtoLink = `mailto:gabyflowe@gmail.com?cc=orlandoappolon1@gmail.com&subject=Confirmación de asistencia&body=${encodeURIComponent(
+      emailBody
+    )}`;
 
-    // alert("¡Gracias por tu respuesta!");
+    // Usar un enlace como respaldo
+    const mailtoAnchor = document.createElement("a");
+    mailtoAnchor.href = mailtoLink;
+    mailtoAnchor.target = "_blank"; // Abrir en una nueva pestaña
+    mailtoAnchor.click();
 
-    // Limpiar el formulario
+    // Limpiar el formulario después del envío
     setFormData({
       name: "",
       attendance: "",
       comment: "",
     });
 
-    setHasStartedTyping(false); // Reinicia el estado al enviar
+    setHasStartedTyping(false); // Reinicia el estado
   };
 
   return (

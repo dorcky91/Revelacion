@@ -4,12 +4,13 @@ import globoAzul from "../../assets/images/globoAzul.png";
 import Confetti from "react-confetti";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../firebaseConfig"; // Asegúrate de que tu configuración de Firebase esté correcta
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Alert } from "react-bootstrap";
 
 const GlobosInteraccion = ({ userName, onComplete }) => {
   const [result, setResult] = useState(null); // "niño" o "niña"
   const [showConfetti, setShowConfetti] = useState(false);
   const [hideText, setHideText] = useState(false);
+  const [error, setError] = useState(false); // Estado para el mensaje de error
 
   const playSound = () => {
     const audio = new Audio("../../assets/audio/cancion.mp3"); // Ruta válida del sonido
@@ -21,6 +22,7 @@ const GlobosInteraccion = ({ userName, onComplete }) => {
     playSound();
     setShowConfetti(true);
     setHideText(true);
+    setError(false); // Elimina el mensaje de error si seleccionó un globo
 
     // Guardar en Firestore
     try {
@@ -38,14 +40,26 @@ const GlobosInteraccion = ({ userName, onComplete }) => {
     setTimeout(() => onComplete(), 5000);
   };
 
+  const handleContinueClick = () => {
+    if (!result) {
+      setError(true); // Muestra el mensaje de error si no se seleccionó un globo
+    } else {
+      onComplete(); // Si seleccionó, permite continuar
+    }
+  };
+
   return (
     <Container className="globos-interaccion py-3">
       <Row>
         <Col className="text-start">
           {!hideText && (
-            <h5 className="mb-5">
-              ¡Haz clic en un globo y adivina si seré niño o niña!❤️❤️❤️
-            </h5>
+            <div className="mb-3">
+              <h5 className="fw-bold">¡Descubre lo que tu corazón te dice!</h5>
+              <p>
+                Observa los globos y selecciona el que creas que refleja mi
+                género❤️❤️❤️
+              </p>
+            </div>
           )}
         </Col>
       </Row>
@@ -73,12 +87,21 @@ const GlobosInteraccion = ({ userName, onComplete }) => {
           <h1>{result}</h1>
         </Row>
       )}
+      {error && (
+        <Row className="mt-2">
+          <Col>
+            <Alert variant="danger" className="text-center">
+              Por favor selecciona un globo para continuar.
+            </Alert>
+          </Col>
+        </Row>
+      )}
       <Row className="text-center">
         <Col>
           <Button
             className="btn-continuar"
             variant="primary"
-            onClick={onComplete}>
+            onClick={handleContinueClick}>
             Cerrar
           </Button>
         </Col>
