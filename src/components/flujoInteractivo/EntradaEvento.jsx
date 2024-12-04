@@ -136,14 +136,39 @@ const EntradaEvento = ({ onStart }) => {
   const [name, setName] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false); // Estado para manejar el loading
+  const [checkingFirebase, setCheckingFirebase] = useState(true); // Verificar en Firebase
   const navigate = useNavigate();
 
-  // Verificar si el usuario ya ha accedido
   useEffect(() => {
-    const hasAccessed = localStorage.getItem("hasAccessedReveal");
-    if (hasAccessed) {
-      navigate("/reveal"); // Redirige automáticamente a /reveal si ya ha accedido
-    }
+    const checkAccessAndDatabase = async () => {
+      const storedName = localStorage.getItem("userName"); // Recuperar nombre del localStorage
+
+      if (storedName) {
+        try {
+          // Verificar en Firebase si el nombre existe
+          const querySnapshot = await getDocs(collection(db, "eventData"));
+          const participants = querySnapshot.docs.map((doc) =>
+            doc.data().name.toLowerCase()
+          );
+
+          if (participants.includes(storedName.toLowerCase())) {
+            // Si el nombre existe, redirigir a /reveal
+            navigate("/reveal");
+            return;
+          } else {
+            // Si el nombre no existe en Firebase, eliminarlo del localStorage
+            localStorage.removeItem("userName");
+          }
+        } catch (error) {
+          console.error("Error al verificar en Firebase:", error);
+        }
+      }
+
+      // Si el usuario no ha accedido o fue eliminado, detener el spinner
+      setCheckingFirebase(false);
+    };
+
+    checkAccessAndDatabase();
   }, [navigate]);
 
   const handleSubmit = async (e) => {
@@ -171,9 +196,9 @@ const EntradaEvento = ({ onStart }) => {
 
       if (alreadyParticipated) {
         setErrorMessage("Ya participaste ❤️😊");
-        // Guardar en localStorage para recordar el acceso
-        localStorage.setItem("hasAccessedReveal", "true");
-        navigate("/reveal"); // Redirigir al usuario a la página '/reveal'
+        // Guardar el nombre en localStorage
+        localStorage.setItem("userName", name);
+        navigate("/reveal");
         setLoading(false); // Desactivar el loading
         return;
       }
@@ -183,7 +208,7 @@ const EntradaEvento = ({ onStart }) => {
       onStart(name);
 
       // Guardar en localStorage para futuras visitas
-      localStorage.setItem("hasAccessedReveal", "true");
+      localStorage.setItem("userName", name);
 
       setLoading(false); // Desactivar el loading
     } catch (error) {
@@ -195,14 +220,23 @@ const EntradaEvento = ({ onStart }) => {
     }
   };
 
+  if (checkingFirebase) {
+    // Mostrar un spinner mientras se verifica en Firebase
+    return (
+      <section className="loading-section py-5">
+        <Container className="text-center">
+          <Spinner animation="border" />
+        </Container>
+      </section>
+    );
+  }
+
   return (
     <section className="entrad-envento py-5">
       <Container className="text-center">
         <Row className="justify-content-center">
           <Col md={6}>
             <h4 className="mb-4">¡Bienvenido al Evento!</h4>
-            {/* <p className="mb-4">¿Qué crees que soy: niño o niña?</p> */}
-
             <Form onSubmit={handleSubmit}>
               <Form.Group className="formulario-entrada mb-3">
                 <Form.Control
@@ -222,7 +256,6 @@ const EntradaEvento = ({ onStart }) => {
                 disabled={loading} // Deshabilitar el botón mientras se carga
               >
                 {loading ? (
-                  // Mostrar el spinner mientras se carga
                   <Spinner
                     as="span"
                     animation="border"
