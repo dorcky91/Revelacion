@@ -67,8 +67,8 @@ const EntradaEvento = ({ onStart }) => {
       <Container className="text-center">
         <Row className="justify-content-center">
           <Col md={6}>
-            <h4 className="mb-3">¡Bienvenido al Evento!</h4>
-            <p className="mb-4">¿Qué crees que soy: niño o niña?</p>
+            <h4 className="mb-4">¡Bienvenido al Evento!</h4>
+            {/* <p className="mb-4">¿Qué crees que soy: niño o niña?</p> */}
 
             <Form onSubmit={handleSubmit}>
               <Form.Group className="formulario-entrada mb-3">
