@@ -56,9 +56,9 @@ const ViaWhatsapp = () => {
               Confirmar con mamá
             </Button>
 
-            <p className="fw-bold fs-6 text-start mt-4 ">
+            {/* <p className="fw-bold fs-6 text-start mt-4 ">
               NOTA: Fecha límite de confirmación, 25 de diciembre 2024
-            </p>
+            </p> */}
           </Col>
         </Row>
       </Container>
